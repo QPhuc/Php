@@ -1,0 +1,50 @@
+.navigation-pc {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-secondary-light;
+    
+    @include respond(phone) {
+        display: none;
+    }
+
+    &-lists {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        &--item {
+
+            &:link,
+            &:visited {
+                font-size: 1.7rem;
+                font-weight: 700;
+                line-height: 1.5rem;
+                color: $color-white;
+                padding: 1rem;
+                text-decoration: none;
+                list-style: none;
+                transition: .25s ease;
+
+                @include respond(phone) {
+                    font-size: 2.8rem;
+                    line-height: 2.5rem;
+                }
+
+                @include respond(smaill-phone) {
+                    font-size: 2.8rem;
+                    line-height: 2.5rem;
+                }
+        }
+
+        &:hover {
+            color: $color-primary;
+        }
+        
+    }
+    }
+
+
+}

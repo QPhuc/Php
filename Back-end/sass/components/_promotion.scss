@@ -1,0 +1,49 @@
+.promotion {
+	margin: 3rem 0rem;
+	font-size: 2.5rem;
+	color: red;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__lists {
+		list-style: none;
+		width: 100%;	
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 104rem;
+
+
+		&--item {
+			
+		}
+	}
+}
+
+.promotion-phone {
+	margin: 5rem 0rem;
+	font-size: 2rem;
+	color: red;
+	display: flex;
+	// justify-content: center;
+	// align-items: center;
+
+	@include respond(iphone-X) {
+		font-size: 3.5rem;
+	}
+
+	&__lists {
+		list-style: none;
+		width: 100%;	
+		display: flex;
+		justify-content: space-around;
+		
+
+
+
+		&--item {
+			
+		}
+	}
+}

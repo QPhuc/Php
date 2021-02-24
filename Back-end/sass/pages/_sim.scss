@@ -1,0 +1,340 @@
+.sim__header {
+	height: 90vh;
+	background-image: linear-gradient(
+		to right bottom,
+		rgba($color-primary-light,0.8),
+		rgba($color-primary-dark,0.8)),
+	url(../img/img-s/5g-spelled-out-with-sim-cards.jpg);
+	background-size: cover;
+	background-position: left;
+	border-bottom-left-radius: 50% 20%;
+	border-bottom-right-radius: 50% 20%;
+	position: relative;
+	
+	// @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+	// only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+	// only screen and (min-width: 125em){
+	// 	background-image: linear-gradient(
+	// 		to right bottom,
+	// 		rgba($color-primary-light,0.8),
+	// 		rgba($color-primary-dark,0.8)),
+	// 	url(../img/img-s/5g-spelled-out-with-sim-cards.jpg);
+	// }
+	
+	@include respond(phone) {
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	&__logo-box {
+		position: absolute;
+		top: 4rem;
+		left: 4rem;
+	}
+	
+	&__logo {
+		height: 3.5rem;
+	}
+
+	&__text-box {
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		text-align: center;
+	}
+
+}
+
+.sim__content {
+	display: flex;
+	margin: 5rem ;
+	justify-content: center;
+	// align-items: center;
+
+	@include respond(phone) {
+		margin: 0;
+		display: block;
+	}
+
+	&__option {
+		padding: 4rem 3rem;
+		box-shadow: 0px 10px 40px rgba(39, 52, 125, 0.12);
+		border-radius: 1rem;
+		flex: 0 0 31.6%;
+
+		@include respond(phone) {
+			opacity: 0;
+			visibility: hidden;
+			display: none;
+		}
+
+		& p {
+			display: block;
+			height: 2px;
+			opacity: 1;
+			background-color: $color-secondary-dark;
+			margin: 3rem 0;
+		}
+
+		&--select {
+			
+			& h2 {
+				font-weight: 700;
+				font-size: 2.2rem;
+				line-height: 2.3rem;
+				margin: 0 0 2rem;
+				color: #0C0033;
+			}
+			& ul {
+				list-style: none;
+
+
+				& a {
+					display: block;
+					text-decoration: none;
+					color: $color-primary;
+					font-size: 1.8rem;
+					line-height: 180%;
+
+					&:hover {
+						text-decoration: underline;
+					}
+
+					&:not(:last-child) {
+						margin-bottom: 2rem;
+					}
+				}
+			}
+		}
+	}
+
+	&__selection {
+		flex: 0 0 65.7%;
+		margin-left: 1rem;
+
+		@include respond(phone) {
+			flex: 0 0 100%;
+			margin: 5rem 0;
+
+		}
+
+		&--openContent {
+			display: none;
+
+			@include respond(phone) {
+				display: flex;
+				flex-direction: column;
+
+
+
+
+			}
+
+			& p {
+				display: block;
+				color: #fff !important;
+				text-align: center;
+				margin: 0 !important;
+				cursor: pointer;
+				padding: .6rem 1.2rem;
+				border-radius: 6px;
+				border-width: 1px;
+				background-color: #14D6CF;
+				border-color: #14D6CF;
+				margin-left: 1rem;
+				margin-top: 1rem
+			}
+		}
+
+		&--heading {
+			margin-bottom: 3rem;
+
+			& h1 {
+				font-size: 5rem;
+				font-weight: 700;
+				text-align: center;
+				color: $color-primary;
+			}
+
+			& p {
+				color: $color-secondary-light !important;
+				font-size: 1.6rem;
+			}
+		}
+
+		& ul {
+			margin-left: 3rem;
+			margin-top: 1rem;
+
+			& li {
+				font-size: 2rem;
+				line-height: 180%;
+
+			}
+		}
+
+		& p {
+			font-size: 2rem;
+			color: red;
+			margin-left: 3rem;
+			margin-top: .5rem;
+		}
+
+		&--search {
+			& form {
+
+				& input {
+					// background: rgba(244, 248, 248, 0.788188);
+					// border-radius:10px;
+					// height: 52px;
+					// margin:auto;
+					// border-color: $color-primary;
+					// border-image: none;
+
+					color: inherit;
+					background-color: $color-grey-light-1;
+					border: none;
+					padding: 2rem 2rem;
+					border-radius: 10rem;
+					width: 90%;
+					transition: all .3s;
+					margin-right: -3rem;
+					font-size: 1.6rem;
+					
+
+					@include respond(phone) {
+						width: 100%;
+					}
+
+					&:focus {
+						outline: none;
+						width: 100%;
+						background-color: $color-grey-light-2;
+
+
+					}
+				}
+			}
+
+			&-icon{
+				width: 2rem;
+				height: 2rem;
+			}
+
+			&-button {
+				border: none;	
+				background-color: $color-grey-light-1;
+
+				
+				
+				&:focus {
+					outline: none;
+				}
+				
+				&:active {
+					transform: translateY(2px);
+				}
+			}
+
+			&-input:focus + &-button {
+				background-color:  $color-grey-light-2;
+			}
+		}
+
+
+		&--choose {
+			margin-top: 3rem;
+
+			& ul {
+				display: flex;
+				flex-wrap: wrap;
+				list-style: none;
+
+				& li {
+					flex: 0 0 32%;
+					margin-bottom: 3rem;
+					margin-right: 1rem;
+
+					@include respond(phone) {
+						flex: 0 0 20%;
+						
+					}
+
+					&:hover {
+						background: $color-primary;
+					}
+				}
+			}
+
+
+
+			&-viettel {
+				width: 6rem;
+				height: 5rem;
+				background-image: url(../img/sim.png);
+				background-position: -364px -12px;
+				background-repeat:no-repeat;
+				display: block;
+				border-left:1px solid #ccc;
+				border-bottom: 1px solid #ccc;
+				border-radius: 50%;
+				align-self: center;
+
+				@include respond(phone) {
+					display: none;
+
+				}
+
+			}
+
+			&-imfomation {
+				&-name {
+					color:$color-secondary-light;
+				}
+			}
+			
+		}
+
+
+		
+	}
+}
+
+.change-color {
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	padding:1.3rem;
+	background: #fff;
+	border: 1px solid #ccc; 
+	position: relative;
+	border-radius: 5px;
+
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+
+	@include respond(phone) {
+		max-width: 14rem;		
+	}
+
+	&:hover {
+		border-color: #38fce3;
+		cursor: pointer;
+	}
+}
+
+.sim__content__openContent {
+	display: block;
+	background-color: #fff;
+	margin: 3rem 0;
+
+	& p {
+		display: block;
+		height: 2px;
+		opacity: 1;
+		background-color: $color-secondary-dark;
+		margin: 3rem 0 !important;
+		padding: 0 !important;
+	}
+}

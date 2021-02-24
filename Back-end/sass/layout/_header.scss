@@ -1,0 +1,126 @@
+.header {
+	height: 10vh;
+	// background-image: linear-gradient(
+	// 	to right bottom,
+	// 	rgba($color-primary-dark, 0.8),
+	// 	rgba($color-primary-light, 0.8));
+	background-color: $color-primary;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+
+//LOGO
+	&__logo {	
+		display: flex;
+		align-items: center;
+		justify-content: center;	
+
+		&--alone {
+			margin-top: .5rem;
+		}
+
+		&__group {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			&--text {
+				margin-top: .5rem;
+				font-size: 1.5rem;
+				color: $color-text;
+
+				@include respond(phone) {
+					font-size: 2rem;
+				}
+
+
+			}
+
+			
+		}	
+	}
+
+	&__logo--big {
+		height: 5rem;
+		width: 5rem;
+		margin-right: .5rem;
+
+		@include respond(phone) {
+			height: 7rem;
+			width: 7rem;
+		}	
+	}
+
+	//CONTACT
+	&__contact{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		&__line {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			
+
+			&--1 {
+				margin-bottom: .5rem;
+			}
+		}
+	}
+
+
+
+	&__contact-icon {
+		width: 2.5rem;
+		height: 2.5rem;
+		margin-right: .5rem;
+		fill: white;
+
+		@include respond(tiny-phone) {
+			width: 1.5rem;
+			height: 1.5rem;
+		}
+
+
+		@include respond(phone) {
+			width: 3rem;
+			height: 3rem;
+		}
+
+		
+	
+
+	}
+
+	&__contact-phone {
+		
+		margin-top: 0.2rem;
+		&:link,
+   		&:visited {
+   			font-size: 1.5rem;
+			font-weight: 400;
+			color: white;
+			text-decoration: none;
+
+			@include respond(phone) {
+				font-size: 3rem;
+			}
+			
+			@include respond(smaill-phone) {
+				font-size: 2.3rem;
+			}
+   		}
+
+   		
+	}
+}
+
+.header__contact__line {
+	@include respond(tiny-phone) {
+		display: none !important;
+	}
+}

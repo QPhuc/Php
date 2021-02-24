@@ -1,0 +1,246 @@
+.card-wifi {
+	/*TEST*/
+	// width: 32rem;
+	// height: 40rem;
+
+	/*background-color: red;*/
+
+	 @include respond(tab-land) { 	// width < 1200?
+  //       width: 20rem;
+		// height: 25rem;
+    }
+
+	
+	box-shadow: 0px 10px 20px rgba(39, 52, 125, 0.12);
+	border-radius: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+
+	&:hover {
+		box-shadow: 0px 10px 20px rgba(39, 52, 125, 0.4);
+	}
+
+
+	&--best {
+		position: absolute;
+		color: white;
+		background: orangered;
+		font-size: 1.6rem;
+		padding: 1rem 0 .5rem 0;
+		z-index: 15000;
+		left: 1.4rem;
+		width: 6.2rem;
+		height: 10rem;
+		text-align: center;
+		vertical-align: center;
+		font-weight: 700;
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 49% 80%, 0 100%);
+
+		@include respond(phone) {
+			font-size: 2.5rem;
+			line-height: 2.7rem;
+			height: 13rem;
+		}
+
+		@include respond(smaill-phone) {
+				
+		}
+	}
+
+	&-heading {
+		font-weight: 700;
+		font-size: 3.7rem;
+		line-height: 3.7rem;
+		text-align: center;
+		text-transform: uppercase;
+		color: #fff;
+		position: relative;
+		overflow: hidden;
+		padding: 1rem 1rem 3rem 1rem;
+
+		@include respond(phone) {
+				font-size: 6rem;
+				line-height: 5rem;
+		}
+
+		@include respond(smaill-phone) {
+				font-size: 6rem;
+				line-height: 5rem;
+		}
+	}
+
+	&-heading {
+		width: 100%;
+		background: linear-gradient(343.74deg, #FF780F 1.81%, #FFBA23 97.76%);
+
+		&::after {
+			content: '';
+			background: rgba(255, 255, 255, 0.2);
+			position: absolute;
+			border-radius: 100%;
+			width: 40rem;
+			height: 40rem;
+			left: -15%;
+			bottom: 1.4rem;
+		}
+
+		&--2 {
+			background: linear-gradient(164.22deg, #29E2E6 0%, #009B94 98.92%);
+
+			&::after {
+				content: '';
+				background: rgba(255, 255, 255, 0.2);
+				position: absolute;
+				border-radius: 100%;
+				width: 40rem;
+				height: 40rem;
+				left: 39%;
+				bottom: -3.6rem;
+			}
+		}
+	}
+
+
+	&-heading span {
+		display: block;
+		font-weight: 300;
+		font-size: 2.2rem;
+		line-height: 2.4rem;
+		text-transform: capitalize;
+		margin-top: 1rem;
+
+		@include respond(phone) {
+			font-size: 3.5rem;
+			line-height: 3.7rem;
+		}
+
+		@include respond(smaill-phone) {
+			font-size: 3.5rem;
+			line-height: 3.7rem;
+		}
+	}
+
+	&-bottom-prices {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 1rem;
+
+	}
+
+	&-bottom {
+		height: 100%;
+		margin-bottom: 5rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&-bottom-percent {
+		color: #FE9A00;
+		font-size: 1.4rem;
+		line-height: 2.4rem;
+		font-weight: 400;
+		background-color: rgba(255, 213, 0, 0.15);
+		border-radius: .6rem;
+		padding: .5rem .5rem;
+		vertical-align: bottom;
+		margin-right: .9rem;
+		align-self: flex-start;
+
+		@include respond(phone) {
+			font-size: 3rem;
+			line-height: 3rem;
+		}
+
+		@include respond(smaill-phone) {
+			font-size: 3rem;
+			line-height: 3rem;
+		}
+
+	}
+
+	&-bottom__sale--price {
+		color: #5CC7CB;
+		font-size: 3rem;
+		line-height: 2.4rem;
+		font-weight: 700;
+
+		@include respond(phone) {
+			font-size: 4.5rem;
+			line-height: 3rem;
+			margin-top: 2rem;
+		}
+
+		@include respond(smaill-phone) {
+			font-size: 4.5rem;
+			line-height: 3rem;
+			margin-top: 2rem;
+		}
+	}
+
+	&-bottom__sale--discount {
+		margin-top: .3rem;
+		font-size: 1.4rem;
+		line-height: 2.4rem;
+		color: #bfc4ce;
+		text-decoration-line: line-through;
+		font-weight: 400;
+
+		@include respond(phone) {
+			font-size: 2.5rem;
+			line-height: 2.4rem;
+		}
+
+		@include respond(smaill-phone) {
+			font-size: 2.5rem;
+			line-height: 2.4rem;
+		}
+	}
+
+
+	&-bottom--text {
+		font-size: 1.6rem;
+		margin-top: 3rem;
+		line-height: 1.9rem;
+		max-width: 23rem;
+		text-align: center;
+		color: #576c8a;
+		text-overflow: unset;
+		white-space: unset;
+		overflow: unset;
+
+		&-margin--bot {
+			margin-top: 2rem;
+			margin-bottom: 3rem;
+		}
+
+
+  		@include respond(phone) {
+			font-size: 2.5rem;
+			line-height: 3.5rem;
+			max-width: 30rem;
+		}
+
+    	@include respond(smaill-phone) {
+			font-size: 2.5rem;
+			line-height: 3.5rem;
+		}
+	}
+
+	&-bottom--btn {
+		text-align: center;
+
+		
+	}
+
+}
+
+
+
+
+
+
+

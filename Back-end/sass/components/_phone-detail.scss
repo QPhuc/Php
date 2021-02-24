@@ -1,0 +1,90 @@
+.phone-detail__info {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	@include respond(phone) {
+		flex-direction: column;
+	}
+
+	@include respond(smaill-phone) {
+		flex-direction: column;
+	}
+
+	&--left {
+		margin-right: auto;
+		//transform: translateX(4rem);
+		
+		@include respond(phone) {
+			margin-right: 0;
+			margin-bottom: 4rem;
+			width: 100%;
+		}
+
+		@include respond(smaill-phone) {
+			margin-right: 0;
+			margin-bottom: 4rem;
+			width: 100%;
+		}
+	}
+
+	&--right {
+		display: flex;
+		flex: 0 0 50%;	
+		transform: translateX(-10rem);
+
+		@include respond(phone) {
+			transform: translateX(0rem);
+		}
+
+		@include respond(smaill-phone) {
+			transform: translateX(0rem);
+		}
+	}
+
+
+
+	
+	&--list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		font-size: 2.5rem;
+		font-weight: 400;
+		list-style: none;
+		
+
+		&-text {
+			flex: 0 0 50%;
+			display: flex;
+			justify-content: flex-start;
+			max-height: 8rem;
+			margin-bottom: 10rem;
+			line-height: 3rem;
+			text-transform: capitalize;
+
+
+
+			
+		}
+
+		&-icon {
+			fill:$color-primary;
+			width: 4rem;
+			height: 2.5rem;
+			margin-right: 1rem;
+
+			&-2 {
+				width: 6rem;
+			}
+
+			&-1,
+			&-2,
+			&-3 {
+				//transform: translateX(1rem);
+				margin-left: 3rem;
+			}
+		}
+	}
+}

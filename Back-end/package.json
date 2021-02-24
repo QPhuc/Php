@@ -1,0 +1,24 @@
+{
+  "name": "1.viettel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass sass/main.scss css/style.css -w",
+    "sass2": "node-sass admin/sass/main.scss admin/css/style.css -w",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.css -o css/style.prefix.css",
+    "compress": "node-sass css/style.prefix.css css/style.css --output-style compressed"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.1.0",
+    "node-sass": "^4.14.1",
+    "postcss": "^8.1.10",
+    "postcss-cli": "^8.3.0"
+  },
+  "dependencies": {},
+  "directories": {
+    "lib": "lib"
+  },
+  "description": ""
+}

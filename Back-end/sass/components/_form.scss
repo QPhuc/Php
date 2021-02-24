@@ -1,0 +1,141 @@
+.form {
+	width: 100%;
+	height: 100%;
+	padding: 0rem 3rem 3rem 3rem;
+	background-color: rgba($color-form, .7);
+	border-radius: 5rem;
+	box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+	transform: translateY(-13rem);
+
+	@include respond(phone) {		
+		 transform: translate(15%,-15%);
+		
+	}
+
+	@include respond(smaill-phone) {
+		transform: translate(0%,-25%);
+	}
+
+	@include respond(iphone-X) {
+		transform: translateY(-16rem);
+	}
+
+	
+	&-btn {
+		@include respond(phone) {
+			font-size: 2rem;
+		}
+	}	
+	
+	&__group {
+		//Button trang chu
+		
+  		// transition: all 0.15s;
+
+  		//
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&--heading {
+		text-align: center;
+		font-size: 3.5rem;
+		letter-spacing: .5rem;
+		font-weight: 700;
+		color: $color-white;
+	}
+
+	&--text {
+		text-align: center;
+		font-size: 2rem;
+		color: $color-white;
+	}
+
+	&__input {
+		font-size: 1.5rem;
+        font-family: inherit;
+        color: inherit;
+        padding: 1.5rem 2rem;
+        border-radius: 5rem;
+        background-color: rbga($color-white, .5);
+        border: none;
+        border-bottom: 3px solid transparent;
+        display: block;
+        text-align: center;
+        transition: all .3s;
+
+        @include respond(phone) {
+			font-size: 2.1rem;
+			padding: 1.5rem 1.3rem;
+		}
+
+        @include respond(smaill-phone) {
+			font-size: 2rem;
+		}
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-black, .1);
+            border-bottom: 3px solid $color-primary;
+
+            &::-webkit-input-placeholder {
+            	opacity: 0;
+        	}
+        }
+
+        &:focus:invalid {
+            border-bottom: 3px solid red;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $color-grey-dark-2;
+
+        }
+
+        &--select {
+        	text-align-last:center; 
+        	padding: 1.5rem 1rem;
+        	border-radius: 1.2rem;
+        	background: none repeat scroll 0 0 #FFFFFF;
+        	border:0px;
+  			outline:none;
+  			box-shadow: 0 0 10px #E8E8E8 inset;
+
+        	@include respond(phone) {
+        		padding: 1.5rem 0rem;
+        	}
+        }
+	}
+
+	&__label {
+		color: $color-white;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-left: 2rem;
+        margin-top: .7rem;
+        display: block;
+        transition: all .3s;
+		
+		@include respond(phone) {
+			font-size: 2.5rem;
+		}
+
+		@include respond(smaill-phone) {
+			font-size: 2.5rem;
+		}
+    }
+
+	&-ui {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__group {
+		margin-bottom: 2.5rem;
+	}
+
+
+}

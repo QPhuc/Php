@@ -1,0 +1,72 @@
+.wifi {
+	height: 110vh;
+	background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-light, 0.85),
+        rgba($color-secondary-dark, 0.85)),
+    url(../img/img-s/viettel-tru-so-s.jpeg);
+    background-size: cover;
+    background-position: center;
+
+    @include respond(tab-port) {
+        height: 80vh;
+    }
+
+    @include respond(phone) {
+        height: 85vh;
+    }
+
+    @include respond(smaill-phone) {
+        height: 110vh;
+    }
+}
+
+.viettel-infomation {
+    padding: 5rem 5rem 8rem 5rem ;
+    margin-bottom: 10rem;
+    text-align: center;
+
+    @include respond(phone) {
+        padding: 5rem 5rem 68rem 5rem ;
+    }
+
+    @include respond(smaill-phone) {
+        padding: 5rem 5rem 50rem 5rem ;
+    }
+
+    &--h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        letter-spacing: .2rem;
+        color: black;
+    }
+}
+
+.wifi-detail {
+	padding: 8rem 5rem ;
+	text-align: center;
+}
+
+.phone-detail {
+    padding: 8rem 5rem ;
+    text-align: center;
+    // background-color: $color-grey-light-1;
+}
+
+.gallary {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(7, 5vw);
+    grid-gap: 0.5rem;
+    padding: 1rem;
+    background-image: linear-gradient(to bottom, #14afb4, #15b4b4, #1ab9b3, #22bdb1, #2cc2af); 
+
+    @include respond(tab-port) { // width < 900?
+        grid-template-rows: repeat(7, 8vw);
+    }
+
+    @include respond(phone) { // width < 600?
+        grid-template-rows: repeat(7, 10vw);
+    } 
+}
+

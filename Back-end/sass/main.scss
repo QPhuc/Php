@@ -1,0 +1,54 @@
+@import "abstracts/variables";
+@import "abstracts/function";
+@import "abstracts/mixin";
+
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
+
+
+
+
+@import "components/viettel-info.scss";
+@import "components/viettel-infomation.scss";
+@import "components/wifi-detail.scss";
+@import "components/phone-detail.scss";
+@import "components/gallary.scss";
+@import "components/button.scss";
+@import "components/card.scss";
+@import "components/card-wifi.scss";
+@import "components/cardSkew.scss";
+@import "components/gallary.scss";
+@import "components/form.scss";
+@import "components/form-2.scss";
+@import "components/table-phone.scss";
+@import "components/promotion.scss";
+@import "components/blogDetail.scss";
+@import "components/line.scss";
+
+
+	
+
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/navigation-pc";
+@import "layout/footer";
+
+
+@import "pages/home";
+@import "pages/wifi-detail-for-html";
+@import "pages/phone-detail-for-html";
+@import "pages/blog";
+@import "pages/sim";
+@import "pages/not-found";
+
+
+
+
+
+
+
+
+
+	

@@ -1,0 +1,25 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+RewriteRule ^trang-chu index.php
+
+RewriteRule "^blog-detail/([0-9]+)/([0-9]+)/([a-zA-Z0-9-]+).html$" "blog-detail.php?id=$1&status=$2&title=$3"
+
+<FilesMatch ".(jpg|jpeg|png|gif|swf)$">
+Header set Cache-Control "max-age=604800, public"
+</FilesMatch>
+
+<files ~ "^.*\.([Hh][Tt][Aa])">
+order allow,deny
+deny from all
+satisfy all
+</files>
+
+<files config.php>
+order allow,deny
+deny from all
+</files>
+
+# disable directory browsing
+Options All -Indexes

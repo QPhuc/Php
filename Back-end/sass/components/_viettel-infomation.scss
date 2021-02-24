@@ -1,0 +1,155 @@
+.viettel-infomation__deep {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 20rem;
+
+
+	&__change {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		color: white;
+		position: absolute;
+		transition: all 2s;
+		margin-left: 8rem;
+
+		@include respond(phone) {
+			flex-direction: column;
+		}
+
+
+		&--1 {
+			z-index: 1111;
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		&--2 {
+			z-index: 2222;
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		&--3 {
+			z-index: 3333;
+			opacity: 0;
+			visibility: hidden;
+		}
+
+	}
+
+	&--left {
+		background: rgba($color-primary,.2);
+		margin-right: 5rem;
+		height: 40vh;
+		width: 50rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		padding: 0 5rem;
+		box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+		
+		@include respond(tab-port) {
+			width: 35rem;
+		}
+
+		@include respond(phone) {
+			height: 50vh;
+			width: 50rem;
+			transform: translate(10%,10%);
+			padding: 0 5rem;
+		}
+
+		@include respond(smaill-phone) {
+			transform: translate(-7%,10%);
+		}
+
+		@include respond(smaill-phone) {
+			  position: absolute;
+			  top: 50%;
+			  left: 50%;
+			  transform: translate(-20%,-48%);
+			  height: 35vh;
+			  width: 40rem;
+			  padding: 0;
+			  margin-right: 0rem;
+		}
+
+		
+
+		& h3 {
+			font-size: 2.2rem;
+			font-weight: 1.5rem;
+			margin-bottom: 2rem;
+			text-transform: capitalize;
+			color: $color-secondary-light;
+		}
+
+		& p {
+			font-size: 1.6rem;
+			color: black;
+
+			@include respond(phone) {
+			  	font-size: 2rem;
+			}
+
+			@include respond(tiny-phone) {
+			  	font-size: 1.5rem;
+			}
+
+			@include respond(iphone-X) {
+			  	font-size: 2.5rem;
+			}
+		}
+	}
+
+	&--right {
+
+		&-img {
+			height: 45vh;
+			width: 50rem;
+			
+
+			@include respond(smaill-phone) {
+				height: 35vh;
+				width: 40rem;		
+			}
+			
+		}
+
+		@include respond(tab-port) {
+			width: 35rem;
+		}
+
+		@include respond(phone) {
+			  position: absolute;
+			  top: 50%;
+			  left: 50%;
+			  transform: translate(-45%,80%);
+			  width: 55rem;
+		}
+
+		@include respond(tiny-phone) {
+			transform: translate(-61%,10%);
+		}
+
+		@include respond(smaill-phone) {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-28%,68%);
+			
+		}
+
+
+	}
+}
+
+.active {
+	opacity: 1;
+	visibility: visible;
+	z-index: 99999;
+}

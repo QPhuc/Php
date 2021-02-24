@@ -1,0 +1,85 @@
+.footer {
+	background-color: $color-primary;
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	&__logo {
+		
+	}
+
+	&-heading {
+		
+	
+		
+	}
+
+	&__text {
+		color: white;
+		font-size: 1.6rem;
+		line-height: 1.6rem;
+		max-width: 80rem;
+		text-align: center;
+		margin-bottom: 5rem;
+
+		@include respond(phone) { // width < 400?
+        	font-size: 3rem; 
+        	line-height: 3rem;
+        	margin-bottom: 4rem;
+    	}
+
+		@include respond(smaill-phone) { // width < 400?
+        	font-size: 3rem; 
+        	line-height: 3rem;
+        	margin-bottom: 4rem;
+    	}
+}
+
+	&__info {
+		width: 100%;
+		text-align: center;
+		display: flex;
+		justify-content: space-between;
+
+		@include respond(phone) {
+        	flex-direction: column;
+    	}
+
+		@include respond(smaill-phone) {
+        	flex-direction: column;
+    	}
+
+    	&__group {
+			@include respond(phone) {
+        		&:not(:last-child) {
+        			margin-bottom: 3rem;
+    			}
+    		}
+
+
+    		@include respond(smaill-phone) {
+        		&:not(:last-child) {
+        			margin-bottom: 3rem;
+    			}
+    		}
+    	}
+	}
+
+	&-bot--1 {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&-bot--2 {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__contact-phone {
+		margin-right: 3rem;
+	}
+}

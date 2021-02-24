@@ -1,0 +1,78 @@
+.card {
+	// FUNCTIONALITY
+	perspective: 150rem;	
+	-moz-perspective: 150rem;
+	position: relative;
+	height: 50rem;
+	width: 30vw;
+	transform: translateY(-3rem);
+	box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+	border-radius: 5rem;
+	
+	@include respond(smaill-phone) {
+		//width: 290%;
+	}	
+	
+
+	&__side {
+		height: 52rem;
+		
+		transition-duration: 1s;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		overflow: hidden;
+		transition: all .8s ease;
+		animation-name: roateImg;
+		animation-delay: 1s;
+		animation-duration: 2s;
+		animation-iteration-count: 3;
+		// animation-iteration-count: infinite;
+  		//animation-direction: alternate;
+
+		@include respond(phone) {
+			width: 290%;
+		}	
+
+		@include respond(smaill-phone) {
+			width: 290%;
+		}	
+
+		&--front {
+			
+		}
+
+		&--back {
+			transform: rotateY(180deg);	
+		}
+
+		&--banner {
+			height: 100%;
+			width: 100%;
+			border-radius: 5rem;
+		}
+	}
+
+	&:hover &__side--front {
+		transform: rotateY(-180deg);
+	}
+
+	&:hover &__side--back {
+		transform: rotateY(0);
+	}
+
+	// @keyframes roateImg {
+	//   from {
+	//     transform: rotateY(-180deg);
+	// 	}
+	  
+	//   to {
+	//    transform: rotateY(0);
+	//   }
+	// }
+
+
+}

@@ -1,0 +1,168 @@
+.wifi {
+	
+	&__header {
+		padding: 1rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@include respond(phone) {
+			padding: 0;
+		}
+
+		&__logo {
+			  @include respond(phone) {
+			    width: 40%;
+			  }
+		}
+
+		&__navigation {
+			list-style: none;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: white;
+			height: 100%;
+			
+
+
+			&--item {
+				font-size: 3rem;
+				font-weight: 700;
+				cursor: pointer;
+				height: 100%;
+				transition: .5s;
+				
+				@include respond(phone) {
+			    	font-size: 3.5rem;
+			  	}
+
+				&--1 {
+					margin-right: 3.5rem;
+
+					@include respond(phone) {
+			    		margin-right: 1.5rem;
+			  		}
+				}
+
+				&:hover {
+					color: $color-primary;
+					border-bottom: 1px $color-primary solid;	
+				}
+			}
+		}
+	}
+
+
+	&__info {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		padding: 15rem;
+
+		@include respond(smaill-phone) {
+			height: 100%;
+			padding: 0rem;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		&--heading {
+			font-size: 5rem;
+			max-width: 35rem;
+
+			@include respond(phone) {
+				font-size: 4rem;
+				max-width: 40rem;
+				margin-top: -35rem;
+			}
+
+			@include respond(smaill-phone) {
+			// margin-top: 10rem;
+			// margin-right: 3rem;
+			// margin-left: 3rem;
+			// flex: 0 0 30%;
+			margin-top: 0;
+		}
+
+		
+	}
+	
+	&--left {
+		flex: 0 0 40%;
+		margin-top: -35rem;
+
+		@include respond(phone) {
+			// margin-top: -12rem;
+			// margin-right: 3rem;
+			// margin-left: 3rem;
+			// flex: 0 0 30%;
+			margin: 0;
+		}
+
+		@include respond(smaill-phone) {
+			// margin-top: 10rem;
+			// margin-right: 3rem;
+			// margin-left: 3rem;
+			// flex: 0 0 30%;
+			margin: 0rem;
+		}
+
+		@include respond(iphone-X) {
+			// margin-top: 10rem;
+			// margin-right: 3rem;
+			// margin-left: 3rem;
+			// flex: 0 0 30%;
+			margin-top: 3.4rem;
+		}
+
+
+	}
+
+	&--right {
+		flex: 1;
+
+		@include respond(phone) {
+			// margin-top: -12rem;
+			// margin-right: 3rem;
+			// margin-left: 3rem;
+			// flex: 0 0 30%;
+			flex: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+
+	&--text {
+		font-size: 1.5rem;
+		font-weight: 700;
+		line-height: 1.5rem;
+		margin-top: 1.5rem;
+		color: $color-text;
+
+		@include respond(smaill-phone) {
+			padding: 0rem;
+		}
+
+	}
+
+
+
+	// &--img {
+	// 	height: 35rem;
+	// 	width: 45rem;
+	// }
+
+}
+}
+
+
+
+
+.header__contact__line {
+	@include respond(tiny-phone) {
+		display: none !important;
+	}
+}
